@@ -18,13 +18,19 @@ struct Buttons: View {
             })
             
             Button(action: {
-                print("Hola desde label")
+                saludo()
             }, label: {
                 Text("Boton con label")
+                    .foregroundColor(.white)
+                    .background(Color.blue)
             })
             
         }
         
+    }
+    
+    func saludo()   {
+        print("Saldando")
     }
 }
 
