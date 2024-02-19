@@ -21,7 +21,18 @@ struct Dividers: View {
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 .frame(
                 width: 200, height: 100, alignment: .center)
+                .padding(.top, 10)
             Text("Rectangulo azul")
+            Divider().frame(height: 8).background(Color.red)
+            Rectangle()
+                .foregroundColor(.red)
+                .frame(
+                    width: 100, height: 100, alignment: .center
+                )
+                .padding(
+                    .top, 10
+                )
+            Text("Cuadrado")
             
         }
     }
