@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HstackVstack: View {
     var body: some View {
-        VStack(alignment: .trailing){
+        VStack(alignment: .trailing, spacing: 0){
             Text("1")
             Text("2")
             Text("3")
