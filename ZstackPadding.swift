@@ -15,8 +15,6 @@ struct ZstackPadding: View {
             Color.yellow
             Text("Platzi")
         }.ignoresSafeArea()
-        
-        
     }
 }
 
