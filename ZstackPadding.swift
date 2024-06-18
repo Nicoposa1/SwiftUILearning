@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ZstackPadding: View {
+    
+    @State var curso :String = "iOS"
+    
     var body: some View {
-        
-        
         ZStack {
             Color.yellow
             
@@ -18,8 +19,18 @@ struct ZstackPadding: View {
                 Image("photo").resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 150, alignment: .center)
-                Text("Esto es una prueba")
-                VStack(alignment: .trailing, spacing: 0){
+                Text("Esto es una prueba").padding(.bottom)
+                
+                ZStack {
+                    if curso == ""{
+                        Text("Curso")
+                            .foregroundColor(Color.blue)
+                    }
+                  
+                    TextField("", text: $curso).padding(.leading, 8.0)
+                }
+                
+                VStack(alignment: .trailing){
                     Text("1")
                     Text("2")
                     Text("3")
@@ -28,7 +39,7 @@ struct ZstackPadding: View {
                         Text("B")
                         Text("S")
                     }.background(Color.red)
-
+                    
                 }.background(Color.blue)
             }
         }.ignoresSafeArea()
