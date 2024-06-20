@@ -10,20 +10,18 @@ import SwiftUI
 struct Buttons: View {
     var body: some View {
         VStack{
-            Button("Mi primer boton", action: {
-                print("Pulse el boton")
-            })
-            Button("Mi segundo boton", action: {
-                print("Pulse mi segundo botton")
-            })
-            
             Button(action: {
                 saludo()
             }, label: {
-                Text("Boton con label")
+                Text("Iniciar sesión")
+                    .multilineTextAlignment(.center)
+                    .padding()
                     .foregroundColor(.white)
                     .background(Color.blue)
-            })
+                
+            }).cornerRadius(5)
+           
+          
             
         }
         

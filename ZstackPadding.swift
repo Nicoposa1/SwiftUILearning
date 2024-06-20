@@ -8,41 +8,64 @@
 import SwiftUI
 
 struct ZstackPadding: View {
-    
-    @State var curso :String = "iOS"
-    
     var body: some View {
         ZStack {
             Color.yellow
-            
+                .ignoresSafeArea()
             VStack{
-                Image("photo").resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 150, alignment: .center)
-                Text("Esto es una prueba").padding(.bottom)
-                
-                ZStack {
-                    if curso == ""{
-                        Text("Curso")
-                            .foregroundColor(Color.blue)
-                    }
-                  
-                    TextField("Curso", text: $curso).padding(.leading, 8.0)
-                }
-                
-                VStack(alignment: .trailing){
-                    Text("1")
-                    Text("2")
-                    Text("3")
-                    HStack(alignment: .top){
-                        Text("A").frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Text("B")
-                        Text("S")
-                    }.background(Color.red)
-                    
-                }.background(Color.blue)
+               
+                imagenes()
+                Text("Log in").fontWeight(.semibold).padding(.bottom).font(.title2)
+                datosUsuarios()
+                Buttons()
+                Spacer()
             }
-        }.ignoresSafeArea()
+        }
+    }
+}
+
+struct imagenes: View {
+    var body: some View{
+        VStack {
+            Image("photo").resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100, height: 150, alignment: .top)
+        }
+      
+    }
+}
+
+struct datosUsuarios: View{
+    @State var Correo :String = "Correo"
+    @State var contraseña :String = "Contraseña"
+
+    var body: some View{
+        VStack(spacing: 10) {
+            if Correo == ""{
+                Text("Curso")
+                    .foregroundColor(Color.blue)
+            }
+            TextField("Curso", text: $Correo)
+               .padding()
+               .frame(width: 340, height: 50)
+               .background(
+                   RoundedRectangle(cornerRadius: 10)
+                       .stroke(Color.black, lineWidth: 1)
+               )
+               .cornerRadius(10)
+            
+            
+            TextField("Esto es un texto largo", text: $contraseña)
+                .padding()
+                .frame(width: 340, height: 50)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
+                .cornerRadius(10)
+        }
+        
+
     }
 }
 
