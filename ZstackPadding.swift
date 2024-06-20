@@ -27,7 +27,7 @@ struct ZstackPadding: View {
                             .foregroundColor(Color.blue)
                     }
                   
-                    TextField("", text: $curso).padding(.leading, 8.0)
+                    TextField("Curso", text: $curso).padding(.leading, 8.0)
                 }
                 
                 VStack(alignment: .trailing){
