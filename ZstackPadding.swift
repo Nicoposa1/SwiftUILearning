@@ -15,7 +15,7 @@ struct ZstackPadding: View {
             VStack{
                
                 imagenes()
-                Text("Log in").fontWeight(.semibold).padding(.bottom).font(.title2)
+                Text("Login").fontWeight(.semibold).padding(.bottom).font(.title2)
                 datosUsuarios()
                 Buttons()
                 Spacer()
