@@ -17,7 +17,7 @@ struct Buttons: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .foregroundColor(.white)
-                    .background(Color.blue)
+                    .background(Color.black)
                 
             }).cornerRadius(5)
            
