@@ -20,6 +20,7 @@ struct ZstackPadding: View {
                 Buttons()
                 Spacer()
             }
+            
         }
     }
 }

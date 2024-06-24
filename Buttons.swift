@@ -21,7 +21,6 @@ struct Buttons: View {
                 
             }).cornerRadius(5)
            
-          
             
         }
         
