@@ -37,8 +37,8 @@ struct imagenes: View {
 }
 
 struct datosUsuarios: View{
-    @State var Correo :String = "Correo"
-    @State var contraseña :String = "Contraseña"
+    @State var Correo :String = "Mail"
+    @State var contraseña :String = "Password"
 
     var body: some View{
         VStack(spacing: 10) {
