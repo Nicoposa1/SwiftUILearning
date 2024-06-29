@@ -13,7 +13,7 @@ struct Buttons: View {
             Button(action: {
                 saludo()
             }, label: {
-                Text("Iniciar sesión")
+                Text("Login")
                     .multilineTextAlignment(.center)
                     .padding()
                     .foregroundColor(.white)
