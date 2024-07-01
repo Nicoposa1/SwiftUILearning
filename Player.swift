@@ -1,4 +1,5 @@
 import SwiftUI
+import AVKit
 
 struct Player: View {
     @State private var isPlayerActive: Bool = false
@@ -9,12 +10,15 @@ struct Player: View {
                 Button(action: {
                     isPlayerActive = true
                 }) {
-                    Image("photo")
-                        .resizable()
+                    ZStack {
+                        Image("photo")
+                            .resizable()
                         .aspectRatio(contentMode: .fit)
+                        Image(systemName: "play.fill").foregroundColor(.white).frame(width: 300, height: 300)
+                    }
                 }
                 .navigationDestination(isPresented: $isPlayerActive) {
-                    VideoPlayerView()
+                    VideoPlayer(player: AVPlayer(url: URL(string: "https://cdn.cloudflare.steamstatic.com/steam/apps/256705156/movie480.mp4")!)).frame(width: 420, height: 360,alignment: .center)
                 }
             }
         }

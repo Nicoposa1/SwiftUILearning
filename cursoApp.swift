@@ -11,7 +11,7 @@ import SwiftUI
 struct cursoApp: App {
     var body: some Scene {
         WindowGroup {
-            ZstackPadding()
+            Player()
         }
     }
 }
